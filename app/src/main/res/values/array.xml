@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="resId">
+        <item>@drawable/hamburger</item>
+        <item>@drawable/spaghetti</item>
+        <item>@drawable/pizza</item>
+        <item>@drawable/cake</item>
+        <item>@drawable/chicken</item>
+        <item>@drawable/salad</item>
+        <item>@drawable/taco</item>
+    </integer-array>
+
+    <string-array name="title">
+        <item>햄버거</item>
+        <item>토마토스파게티</item>
+        <item>피자</item>
+        <item>케익</item>
+        <item>치킨</item>
+        <item>샐러드</item>
+        <item>타코</item>
+    </string-array>
+
+    <string-array name="content">
+        <item>300칼로리</item>
+        <item>390칼로리</item>
+        <item>266칼로리</item>
+        <item>200칼로리</item>
+        <item>1000칼로리</item>
+        <item>100칼로리</item>
+        <item>320칼로리</item>
+    </string-array>
+</resources>
