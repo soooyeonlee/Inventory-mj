@@ -8,7 +8,7 @@
     tools:context=".Menu">
 
     <Button
-        android:id="@+id/inform"
+        android:id="@+id/informbutton"
         android:layout_width="240dp"
         android:layout_height="106dp"
         android:layout_marginBottom="468dp"
