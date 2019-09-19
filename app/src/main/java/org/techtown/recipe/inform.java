@@ -1,40 +1,65 @@
 package org.techtown.recipe;
 
-import android.content.res.TypedArray;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.widget.EditText;
 import android.widget.ListView;
 
 public class inform extends AppCompatActivity {
-    private CustomAdapter adapter;
-    private ListView listView;
+    ListView listview = null ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inform);
 
-        adapter = new CustomAdapter();
-        listView = (ListView) findViewById(R.id.listView);
+        ListViewAdapter adapter;
 
-        setData();
+        // Adapter 생성
+        adapter = new ListViewAdapter();
 
-        listView.setAdapter(adapter);
+        listview=(ListView)findViewById(R.id.listView1);
+        listview.setAdapter(adapter);
+
+        adapter.addItem(ContextCompat.getDrawable(this, R.drawable.chicken),
+                "chicken", "100칼로리") ;
+
+        adapter.addItem(ContextCompat.getDrawable(this, R.drawable.cake),
+                "cake", "300칼로리") ;
+
+        adapter.addItem(ContextCompat.getDrawable(this, R.drawable.spaghetti),
+                "spaghetti", "500칼로리") ;
+
+        adapter.addItem(ContextCompat.getDrawable(this, R.drawable.salad),
+                "salad", "100칼로리") ;
+
+        adapter.addItem(ContextCompat.getDrawable(this, R.drawable.taco),
+                "taco", "266칼로리") ;
+
+        adapter.addItem(ContextCompat.getDrawable(this, R.drawable.pizza),
+                "pizza", "700칼로리") ;
+
+        EditText editTextFilter=(EditText)findViewById(R.id.editTextFilter);
+        editTextFilter.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable edit) {
+                String filterText = edit.toString() ;
+                ((ListViewAdapter)listview.getAdapter()).getFilter().filter(filterText) ;
+            }
+        });
     }
 
-    private void setData() {
-        TypedArray arrResId = getResources().obtainTypedArray(R.array.resId);
-        String[] titles = getResources().getStringArray(R.array.title);
-        String[] contents = getResources().getStringArray(R.array.content);
-
-        for (int i = 0; i < arrResId.length(); i++) {
-            CustomDTO dto = new CustomDTO();
-            dto.setResId(arrResId.getResourceId(i, 0));
-            dto.setTitle(titles[i]);
-            dto.setContent(contents[i]);
-
-            adapter.addItem(dto);
-        }
     }
-
-}

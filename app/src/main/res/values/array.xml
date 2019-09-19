@@ -11,10 +11,10 @@
     </integer-array>
 
     <string-array name="title">
-        <item>햄버거</item>
+        <item>hamburger</item>
         <item>토마토스파게티</item>
         <item>피자</item>
-        <item>케익</item>
+        <item>cake</item>
         <item>치킨</item>
         <item>샐러드</item>
         <item>타코</item>
