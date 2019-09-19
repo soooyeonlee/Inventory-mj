@@ -17,7 +17,7 @@ public class Menu extends AppCompatActivity {
         button2.setOnClickListener(
                 new Button.OnClickListener(){
                     public void onClick(View view){
-                        Intent intent=new Intent(getApplicationContext(),foodlistActivity.class);
+                        Intent intent=new Intent(getApplicationContext(),inform.class);
                         startActivity(intent);
                     }
                 }
