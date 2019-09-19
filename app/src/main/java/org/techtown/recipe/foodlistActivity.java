@@ -17,7 +17,7 @@ public class foodlistActivity extends AppCompatActivity {
         button3.setOnClickListener(
                 new Button.OnClickListener(){
                     public void onClick(View view){
-                        Intent intent=new Intent(getApplicationContext(),riceActivity.class);
+                        Intent intent=new Intent(getApplicationContext(),inform.class);
                         startActivity(intent);
                     }
                 }
