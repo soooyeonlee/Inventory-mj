@@ -9,16 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".meatActivity"></activity>
+        <activity android:name=".LoadingActivity"></activity>
+        <activity android:name=".meatActivity" />
         <activity android:name=".fishActivity" />
         <activity android:name=".sidedishesActivity" />
         <activity android:name=".noodleActivity" />
         <activity android:name=".soupActivity" />
         <activity android:name=".foodlistActivity" />
         <activity android:name=".riceActivity" />
-        <activity android:name=".Inform" />
-        <activity android:name=".Menu" />
-        <activity android:name=".menu" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
